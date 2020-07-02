@@ -61,9 +61,13 @@ def travelingSalesman(graph):
     return (route, totalDis)
 
 def get_names(nodes):
-        for x in range(20):
-            print(f'{location_long_lat.iloc[x, 0]:30} ---> \t{location_long_lat.iloc[x+1, 0]:15}')
-        print(f'{location_long_lat.iloc[20, 0]:30} ---> \t{location_long_lat.iloc[0, 0]:15}')
+    x=0
+    while x < len(nodes)-1:
+        print(f'{location_long_lat.iloc[nodes[x], 0]:30} ---> \t{location_long_lat.iloc[nodes[x+1], 0]:15}')
+        x += 1
+
+    
+            
 
     
 class Graph(object):
